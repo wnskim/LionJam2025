@@ -113,6 +113,7 @@ texture = SubResource("AtlasTexture_dimek")
 script = ExtResource("18_lg7gg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
+visible = false
 texture = SubResource("AtlasTexture_arc5v")
 
 [node name="Camera2D" type="Camera2D" parent="Player/Sprite2D"]
