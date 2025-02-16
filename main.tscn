@@ -1,0 +1,120 @@
+[gd_scene load_steps=14 format=3 uid="uid://dyaexxsau1uau"]
+
+[ext_resource type="Texture2D" uid="uid://baegsx03aicfo" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Tileset/Dirt - simplified.png" id="1_txi1i"]
+[ext_resource type="Texture2D" uid="uid://c1slcgxo4g32j" path="res://Assets/Hana Caraka - Farming n Foraging [sample]/misc.png" id="9_4rqan"]
+[ext_resource type="Texture2D" uid="uid://cyesbtv4an4od" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Tileset/Fall - simplified.png" id="10_muql8"]
+[ext_resource type="Texture2D" uid="uid://ff0rcoucoc87" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Tileset/Spring - simplified.png" id="11_wwcxx"]
+[ext_resource type="Script" path="res://player.gd" id="18_lg7gg"]
+[ext_resource type="Texture2D" uid="uid://b5iyqpif2n5i4" path="res://Assets/Hana Caraka - Base Character [sample]/idle.png" id="19_xgmvn"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_50snn"]
+texture = ExtResource("1_txi1i")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+1:1/0/custom_data_0 = true
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrpyn"]
+texture = ExtResource("10_muql8")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+1:1/0/custom_data_0 = true
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qg8ab"]
+texture = ExtResource("11_wwcxx")
+0:0/0 = 0
+1:0/0 = 0
+1:0/0/custom_data_0 = true
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+1:1/0/custom_data_0 = true
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4qbdk"]
+texture = ExtResource("9_4rqan")
+0:0/0 = 0
+0:0/0/custom_data_0 = true
+1:0/0 = 0
+1:0/0/custom_data_0 = true
+2:0/0 = 0
+2:0/0/custom_data_0 = true
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_sl3dv"]
+custom_data_layer_0/name = "walkable"
+custom_data_layer_0/type = 1
+sources/0 = SubResource("TileSetAtlasSource_50snn")
+sources/1 = SubResource("TileSetAtlasSource_hrpyn")
+sources/2 = SubResource("TileSetAtlasSource_qg8ab")
+sources/3 = SubResource("TileSetAtlasSource_4qbdk")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dimek"]
+atlas = ExtResource("19_xgmvn")
+region = Rect2(112, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arc5v"]
+atlas = ExtResource("19_xgmvn")
+region = Rect2(32, 112, 16, 16)
+
+[node name="Main" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_sl3dv")
+format = 2
+layer_0/tile_data = PackedInt32Array(65538, 65538, 0, 65539, 65538, 0, 65540, 65538, 0, 65541, 65538, 0, 65542, 65538, 0, 65543, 65538, 0, 65544, 65538, 0, 65545, 65538, 0, 65546, 65538, 0, 65547, 65538, 0, 65548, 65538, 0, 589826, 65538, 2, 589827, 65538, 2, 589828, 65538, 2, 589829, 65538, 2, 589830, 65538, 2, 589831, 65538, 2, 589832, 65538, 2, 589833, 65538, 2, 589834, 65538, 2, 589835, 65538, 2, 589836, 65538, 2, 131085, 131074, 1, 196621, 131074, 1, 262157, 131074, 1, 327693, 131074, 1, 393229, 131074, 1, 458765, 131074, 1, 524301, 131074, 1, 131073, 2, 1, 196609, 2, 1, 262145, 2, 1, 327681, 2, 1, 393217, 2, 1, 458753, 2, 1, 524289, 2, 1, 589825, 2, 2, 65549, 131074, 0, 589837, 131074, 2, 65537, 2, 0, 131074, 3, 0, 196610, 3, 0, 262146, 3, 0, 327682, 3, 0, 393218, 3, 0, 458754, 3, 0, 524290, 3, 0, 131075, 3, 0, 196611, 3, 0, 262147, 3, 0, 327683, 3, 0, 393219, 3, 0, 458755, 3, 0, 524291, 3, 0, 131076, 3, 0, 196612, 3, 0, 262148, 3, 0, 327684, 3, 0, 393220, 3, 0, 458756, 3, 0, 524292, 3, 0, 131077, 3, 0, 196613, 3, 0, 262149, 3, 0, 327685, 3, 0, 393221, 3, 0, 458757, 3, 0, 524293, 3, 0, 131078, 3, 0, 196614, 3, 0, 262150, 3, 0, 327686, 3, 0, 393222, 3, 0, 458758, 3, 0, 524294, 3, 0, 131079, 3, 0, 196615, 3, 0, 262151, 3, 0, 327687, 3, 0, 393223, 3, 0, 458759, 3, 0, 524295, 3, 0, 131080, 3, 0, 196616, 3, 0, 262152, 3, 0, 327688, 3, 0, 393224, 3, 0, 458760, 3, 0, 524296, 3, 0, 131081, 3, 0, 196617, 3, 0, 262153, 3, 0, 327689, 3, 0, 393225, 3, 0, 458761, 3, 0, 524297, 3, 0, 131082, 3, 0, 196618, 3, 0, 262154, 3, 0, 327690, 3, 0, 393226, 3, 0, 458762, 3, 0, 524298, 3, 0, 131083, 3, 0, 196619, 3, 0, 262155, 3, 0, 327691, 3, 0, 393227, 3, 0, 458763, 3, 0, 524299, 3, 0, 131084, 3, 0, 196620, 3, 0, 262156, 3, 0, 327692, 3, 0, 393228, 3, 0, 458764, 3, 0, 524300, 3, 0)
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(40, 40)
+texture = SubResource("AtlasTexture_dimek")
+script = ExtResource("18_lg7gg")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = SubResource("AtlasTexture_arc5v")
+
+[node name="Camera2D" type="Camera2D" parent="Player/Sprite2D"]
+position = Vector2(-56, -41)
