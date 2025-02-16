@@ -54,7 +54,6 @@ texture = ExtResource("10_muql8")
 texture = ExtResource("11_wwcxx")
 0:0/0 = 0
 1:0/0 = 0
-1:0/0/custom_data_0 = true
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -117,4 +116,4 @@ script = ExtResource("18_lg7gg")
 texture = SubResource("AtlasTexture_arc5v")
 
 [node name="Camera2D" type="Camera2D" parent="Player/Sprite2D"]
-position = Vector2(-56, -41)
+position = Vector2(0, 2)

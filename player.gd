@@ -4,6 +4,18 @@ extends Sprite2D
 @onready var sprite2d = $Sprite2D
 var is_moving = false 
 
+
+
+func _physics_process(delta):
+	if is_moving == false:
+		return
+	if global_position == sprite2d.global_position:
+		is_moving = false
+		return
+		
+	sprite2d.global_position = sprite2d.global_position.move_toward(global_position, 1 )
+
+
 func _process(delta):
 	if is_moving:
 		return
