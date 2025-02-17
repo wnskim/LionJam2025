@@ -1,17 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://bp877spahoych"]
+[gd_scene load_steps=10 format=3 uid="uid://bp877spahoych"]
 
+[ext_resource type="Script" path="res://main_menu.gd" id="1_0xs4u"]
 [ext_resource type="Texture2D" uid="uid://u64l8mbkpk2j" path="res://Assets/farm-scene-with-windmill-and-barn-free-vector.jpg" id="1_ppe35"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1m3bq"]
 texture = ExtResource("1_ppe35")
 modulate_color = Color(0.353438, 0.353438, 0.353438, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ypl4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p8q5m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rbk1"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guvui"]
-bg_color = Color(5.29438e-06, 0.731045, 0.128851, 1)
+bg_color = Color(0.74559, 1, 0.734634, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gxe0u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdmn8"]
 bg_color = Color(0.774391, 1, 0.911626, 1)
@@ -24,6 +33,7 @@ corner_radius_bottom_left = 8
 layout_mode = 3
 anchor_right = 2.0
 anchor_bottom = 2.0
+script = ExtResource("1_0xs4u")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(152, 120)
@@ -46,32 +56,72 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -65.5
-offset_top = -47.0
+offset_top = -23.0
 offset_right = 65.5
-offset_bottom = 47.0
+offset_bottom = 71.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0.109804, 0.109804, 0.109804, 1)
+theme_override_colors/font_hover_color = Color(0.109804, 0.109804, 0.109804, 1)
+theme_override_colors/font_pressed_color = Color(0.109804, 0.109804, 0.109804, 1)
 theme_override_colors/font_color = Color(0.109341, 0.109341, 0.109341, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4ypl4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_p8q5m")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6rbk1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_guvui")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gxe0u")
 theme_override_styles/normal = SubResource("StyleBoxFlat_sdmn8")
 text = "Start"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="Options" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0.109804, 0.109804, 0.109804, 1)
+theme_override_colors/font_hover_color = Color(0.109804, 0.109804, 0.109804, 1)
+theme_override_colors/font_pressed_color = Color(0.109804, 0.109804, 0.109804, 1)
 theme_override_colors/font_color = Color(0.109341, 0.109341, 0.109341, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4ypl4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_p8q5m")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6rbk1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_guvui")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gxe0u")
 theme_override_styles/normal = SubResource("StyleBoxFlat_sdmn8")
-text = "How to play"
+text = "Options"
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0.109804, 0.109804, 0.109804, 1)
+theme_override_colors/font_hover_color = Color(0.109804, 0.109804, 0.109804, 1)
+theme_override_colors/font_pressed_color = Color(0.109804, 0.109804, 0.109804, 1)
 theme_override_colors/font_color = Color(0.109341, 0.109341, 0.109341, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4ypl4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_p8q5m")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6rbk1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_guvui")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gxe0u")
 theme_override_styles/normal = SubResource("StyleBoxFlat_sdmn8")
 text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.5
+offset_top = 36.0
+offset_right = 70.5
+offset_bottom = 79.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "[name here]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
