@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp877spahoych"]
+
+[ext_resource type="Texture2D" uid="uid://u64l8mbkpk2j" path="res://Assets/farm-scene-with-windmill-and-barn-free-vector.jpg" id="1_ppe35"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1m3bq"]
+texture = ExtResource("1_ppe35")
+modulate_color = Color(0.353438, 0.353438, 0.353438, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guvui"]
+bg_color = Color(5.29438e-06, 0.731045, 0.128851, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdmn8"]
+bg_color = Color(0.774391, 1, 0.911626, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchor_right = 2.0
+anchor_bottom = 2.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(152, 120)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1m3bq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.5
+offset_top = -47.0
+offset_right = 65.5
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.109341, 0.109341, 0.109341, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_guvui")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sdmn8")
+text = "Start"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.109341, 0.109341, 0.109341, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_guvui")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sdmn8")
+text = "How to play"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.109341, 0.109341, 0.109341, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_guvui")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sdmn8")
+text = "Exit"
