@@ -1,0 +1,56 @@
+[gd_scene load_steps=14 format=3 uid="uid://3r6lkvjfphv3"]
+
+[ext_resource type="Texture2D" uid="uid://bdu5kngntnde4" path="res://Assets/updatedTileSet/Fall - simplified.png" id="1_7lf44"]
+[ext_resource type="Script" path="res://credits.gd" id="1_s10oi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gep6i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eeb62"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_23eg4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_afhbs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6556h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ljcgp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5cn2w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iabjn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_syvpd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mbsbo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4bl8k"]
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_s10oi")
+
+[node name="Fall-Simplified" type="Sprite2D" parent="."]
+position = Vector2(48, 40)
+texture = ExtResource("1_7lf44")
+
+[node name="Back" type="Button" parent="."]
+offset_right = 30.0
+offset_bottom = 19.0
+theme_override_colors/font_disabled_color = Color(0.860369, 0.860369, 0.860369, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.646029, 0.646029, 0.646029, 1)
+theme_override_colors/font_hover_color = Color(0.647059, 0.647059, 0.647059, 1)
+theme_override_colors/font_pressed_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_font_sizes/font_size = 7
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gep6i")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_eeb62")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_23eg4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_afhbs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6556h")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ljcgp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5cn2w")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_iabjn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_syvpd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_mbsbo")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4bl8k")
+text = "< Back"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

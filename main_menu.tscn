@@ -105,6 +105,21 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6rbk1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_guvui")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_gxe0u")
 theme_override_styles/normal = SubResource("StyleBoxFlat_sdmn8")
+text = "Credits"
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0.109804, 0.109804, 0.109804, 1)
+theme_override_colors/font_hover_color = Color(0.109804, 0.109804, 0.109804, 1)
+theme_override_colors/font_pressed_color = Color(0.109804, 0.109804, 0.109804, 1)
+theme_override_colors/font_color = Color(0.109341, 0.109341, 0.109341, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4ypl4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_p8q5m")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6rbk1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_guvui")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gxe0u")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sdmn8")
 text = "Exit"
 
 [node name="Label" type="Label" parent="."]
@@ -124,4 +139,5 @@ vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_exit_pressed"]
