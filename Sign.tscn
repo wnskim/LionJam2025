@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfxywf1ai8r0w"]
+
+[ext_resource type="Script" path="res://sign.gd" id="1_wm3dn"]
+[ext_resource type="Texture2D" uid="uid://can8bvt4bba5c" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Props/sign.png" id="2_a4mnf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m34l4"]
+radius = 11.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1bff"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Sign" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_wm3dn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_m34l4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2.98023e-08)
+scale = Vector2(1.16406, 1.22098)
+texture = ExtResource("2_a4mnf")
+hframes = 4
+vframes = 3
+frame = 8
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -41.0
+offset_top = -41.0
+offset_right = 41.0
+offset_bottom = -10.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b1bff")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 78.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 4
+text = "Today's Objective:
+3 Carrots, 2 Potatoes, 4 Corn, 3 Wheat"
+autowrap_mode = 2
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

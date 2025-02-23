@@ -1,6 +1,6 @@
-[gd_scene load_steps=30 format=4 uid="uid://dyaexxsau1uau"]
+[gd_scene load_steps=34 format=4 uid="uid://dyaexxsau1uau"]
 
-[ext_resource type="PackedScene" uid="uid://b6aubb67kkm6k" path="res://crops/carrot.tscn" id="1_0wg5y"]
+[ext_resource type="Texture2D" uid="uid://6bbrv8v2fpr" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Props/Other.png" id="1_h1wwh"]
 [ext_resource type="Texture2D" uid="uid://baegsx03aicfo" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Tileset/Dirt - simplified.png" id="1_txi1i"]
 [ext_resource type="Texture2D" uid="uid://tmsru4whvnhj" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Props/Stone and Rock.png" id="3_w3khd"]
 [ext_resource type="Texture2D" uid="uid://dlk4yldr7foj6" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Props/Props-All.png" id="4_f8554"]
@@ -12,8 +12,19 @@
 [ext_resource type="Texture2D" uid="uid://c1slcgxo4g32j" path="res://Assets/Hana Caraka - Farming n Foraging [sample]/misc.png" id="9_4rqan"]
 [ext_resource type="Texture2D" uid="uid://pygr5s5dyuwc" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Props/Tree.png" id="9_qn4aq"]
 [ext_resource type="Texture2D" uid="uid://cyesbtv4an4od" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Tileset/Fall - simplified.png" id="10_muql8"]
+[ext_resource type="Texture2D" uid="uid://can8bvt4bba5c" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Props/sign.png" id="11_j3xvy"]
 [ext_resource type="Texture2D" uid="uid://ff0rcoucoc87" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Tileset/Spring - simplified.png" id="11_wwcxx"]
 [ext_resource type="PackedScene" uid="uid://caqn4x0wbegu4" path="res://player/player_2.tscn" id="15_6bkba"]
+[ext_resource type="PackedScene" uid="uid://cfxywf1ai8r0w" path="res://Sign.tscn" id="15_8pvvv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ki6vc"]
+texture = ExtResource("1_h1wwh")
+0:2/next_alternative_id = 2
+0:2/0 = 0
+0:2/1 = 1
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrpyn"]
 texture = ExtResource("10_muql8")
@@ -312,6 +323,12 @@ texture = ExtResource("5_abuy0")
 2:1/0 = 0
 3:1/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ivy3i"]
+texture = ExtResource("11_j3xvy")
+0:2/next_alternative_id = 2
+0:2/0 = 0
+0:2/1 = 1
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vj1tg"]
 texture = ExtResource("6_y3qm4")
 0:0/0 = 0
@@ -404,6 +421,8 @@ sources/11 = SubResource("TileSetAtlasSource_g1q42")
 sources/13 = SubResource("TileSetAtlasSource_dfnes")
 sources/14 = SubResource("TileSetAtlasSource_v1gxr")
 sources/12 = SubResource("TileSetAtlasSource_wono1")
+sources/0 = SubResource("TileSetAtlasSource_ki6vc")
+sources/5 = SubResource("TileSetAtlasSource_ivy3i")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6sq6e"]
 texture = ExtResource("10_muql8")
@@ -426,8 +445,18 @@ sources/0 = SubResource("TileSetAtlasSource_6sq6e")
 position = Vector2(152, 120)
 zoom = Vector2(0.5, 0.5)
 
-[node name="Crop" parent="." instance=ExtResource("1_0wg5y")]
+[node name="Crop" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 position = Vector2(216, 88)
+script = null
 
 [node name="Grass" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -455,4 +484,8 @@ tile_map_data = PackedByteArray("AAAMAAQAAAABAAAAAAANAAQAAAABAAAAAAAOAAQAAAACAAA
 tile_set = SubResource("TileSet_6scye")
 
 [node name="Player2" parent="." instance=ExtResource("15_6bkba")]
-position = Vector2(112, 96)
+z_index = 10
+position = Vector2(114, 97)
+
+[node name="Sign" parent="." instance=ExtResource("15_8pvvv")]
+position = Vector2(152, 56)

@@ -54,6 +54,7 @@ walk_down={
 [layer_names]
 
 2d_physics/layer_1="dirt"
+2d_physics/layer_2="interactions"
 
 [rendering]
 

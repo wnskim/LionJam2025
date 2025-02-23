@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://caqn4x0wbegu4"]
+[gd_scene load_steps=69 format=3 uid="uid://caqn4x0wbegu4"]
 
 [ext_resource type="Texture2D" uid="uid://b5iyqpif2n5i4" path="res://Assets/Hana Caraka - Base Character [sample]/idle.png" id="1_q3lrq"]
 [ext_resource type="Texture2D" uid="uid://ne245thremgi" path="res://Assets/Hana Caraka - Base Character/Basic/idle copy.png" id="2_0bp03"]
@@ -458,15 +458,20 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_xbye4"]
 radius = 8.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_e8uqq"]
+radius = 11.0
+
 [node name="Player2" type="CharacterBody2D"]
+collision_layer = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(40, 22)
+position = Vector2(39, 22)
 sprite_frames = SubResource("SpriteFrames_g7b0c")
 animation = &"idle_front"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(39, 22)
 shape = SubResource("CircleShape2D_xbye4")
 
@@ -483,3 +488,17 @@ animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 script = ExtResource("9_moyji")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+
+[node name="Interaction Components" type="Node2D" parent="."]
+z_index = 1
+
+[node name="InteractionArea" type="Area2D" parent="Interaction Components"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Components/InteractionArea"]
+position = Vector2(39, 22)
+shape = SubResource("CircleShape2D_e8uqq")
+
+[connection signal="area_entered" from="Interaction Components/InteractionArea" to="StateMachine" method="_on_interaction_area_area_entered"]
+[connection signal="area_exited" from="Interaction Components/InteractionArea" to="StateMachine" method="_on_interaction_area_area_exited"]
