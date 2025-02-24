@@ -55,3 +55,8 @@ func _on_interaction_area_area_entered(area: Area2D) -> void:
 
 func _on_interaction_area_area_exited(area: Area2D) -> void:
 	all_interactions.erase(area)
+
+func execute_interaction():
+	if all_interactions:
+		var cur_interaction = all_interactions[0]
+		

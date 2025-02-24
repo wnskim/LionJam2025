@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://co5n378x6n0kb"]
+
+[ext_resource type="Script" path="res://Crops/carrot.gd" id="1_ilpjc"]
+[ext_resource type="Texture2D" uid="uid://b1ge8rp17pxbk" path="res://Assets/Hana Caraka - Farming n Foraging/crops/potato.png" id="2_ei0fa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m34l4"]
+
+[node name="Potato" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_ilpjc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_m34l4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ei0fa")
+hframes = 5
+vframes = 2
+frame = 6

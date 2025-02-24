@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://dyaexxsau1uau"]
+[gd_scene load_steps=39 format=4 uid="uid://dyaexxsau1uau"]
 
 [ext_resource type="Texture2D" uid="uid://6bbrv8v2fpr" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Props/Other.png" id="1_h1wwh"]
 [ext_resource type="Texture2D" uid="uid://baegsx03aicfo" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Tileset/Dirt - simplified.png" id="1_txi1i"]
@@ -16,6 +16,11 @@
 [ext_resource type="Texture2D" uid="uid://ff0rcoucoc87" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Tileset/Spring - simplified.png" id="11_wwcxx"]
 [ext_resource type="PackedScene" uid="uid://caqn4x0wbegu4" path="res://player/player_2.tscn" id="15_6bkba"]
 [ext_resource type="PackedScene" uid="uid://cfxywf1ai8r0w" path="res://Sign.tscn" id="15_8pvvv"]
+[ext_resource type="PackedScene" uid="uid://cs3sbj55tnpqk" path="res://Timer.tscn" id="17_ispe0"]
+[ext_resource type="PackedScene" uid="uid://bco1oaxulucii" path="res://Crops/Carrot.tscn" id="18_latcl"]
+[ext_resource type="PackedScene" uid="uid://dj2r1wqn0cc0u" path="res://Crops/Corn.tscn" id="19_rpqki"]
+[ext_resource type="PackedScene" uid="uid://co5n378x6n0kb" path="res://Crops/Potato.tscn" id="20_uctdy"]
+[ext_resource type="PackedScene" uid="uid://b7tn52k2dkb4v" path="res://Crops/Wheat.tscn" id="21_6tbis"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ki6vc"]
 texture = ExtResource("1_h1wwh")
@@ -441,22 +446,21 @@ sources/0 = SubResource("TileSetAtlasSource_6sq6e")
 
 [node name="Main" type="Node2D"]
 
+[node name="Timer" parent="." instance=ExtResource("17_ispe0")]
+z_index = 100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 80.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(152, 120)
 zoom = Vector2(0.5, 0.5)
-
-[node name="Crop" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-position = Vector2(216, 88)
-script = null
 
 [node name="Grass" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -489,3 +493,15 @@ position = Vector2(114, 97)
 
 [node name="Sign" parent="." instance=ExtResource("15_8pvvv")]
 position = Vector2(152, 56)
+
+[node name="Carrot" parent="." instance=ExtResource("18_latcl")]
+position = Vector2(68, 73)
+
+[node name="Corn" parent="." instance=ExtResource("19_rpqki")]
+position = Vector2(68, 149)
+
+[node name="Potato" parent="." instance=ExtResource("20_uctdy")]
+position = Vector2(68, 124)
+
+[node name="Wheat" parent="." instance=ExtResource("21_6tbis")]
+position = Vector2(69, 98)

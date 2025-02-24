@@ -90,7 +90,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6rbk1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_guvui")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_gxe0u")
 theme_override_styles/normal = SubResource("StyleBoxFlat_sdmn8")
-text = "Options"
+text = "How to Play"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2

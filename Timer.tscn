@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs3sbj55tnpqk"]
+
+[ext_resource type="Script" path="res://timer.gd" id="1_dn1vx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iuc1d"]
+bg_color = Color(0.6, 0.647059, 0.6, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.18359, 0.18359, 0.18359, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Timer" type="Panel"]
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 82.0
+offset_bottom = 33.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iuc1d")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+script = ExtResource("1_dn1vx")
+metadata/_edit_use_anchors_ = true
+
+[node name="s" type="Timer" parent="RichTextLabel"]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="RichTextLabel/s" to="RichTextLabel" method="_on_ms_timeout"]

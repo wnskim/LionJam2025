@@ -86,7 +86,7 @@ offset_right = 32.0
 offset_bottom = 25.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 11
-text = "OPTIONS"
+text = "How to Play"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -110,7 +110,9 @@ text = "How to play:
 
 3. Harvest the crops before they go bad!
 
-4. Deliver the crops before the day ends!"
+4. Deliver the crops before the day ends!
+
+You have 12 hours (= 24 mins). Good luck!"
 selection_enabled = true
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
