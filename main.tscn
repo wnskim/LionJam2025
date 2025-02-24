@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://dyaexxsau1uau"]
+[gd_scene load_steps=40 format=4 uid="uid://dyaexxsau1uau"]
 
 [ext_resource type="Texture2D" uid="uid://6bbrv8v2fpr" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Props/Other.png" id="1_h1wwh"]
 [ext_resource type="Texture2D" uid="uid://baegsx03aicfo" path="res://Assets/Hana Caraka - Topdown Tileset [sample]/Tileset/Dirt - simplified.png" id="1_txi1i"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dj2r1wqn0cc0u" path="res://Crops/Corn.tscn" id="19_rpqki"]
 [ext_resource type="PackedScene" uid="uid://co5n378x6n0kb" path="res://Crops/Potato.tscn" id="20_uctdy"]
 [ext_resource type="PackedScene" uid="uid://b7tn52k2dkb4v" path="res://Crops/Wheat.tscn" id="21_6tbis"]
+[ext_resource type="AudioStream" uid="uid://b6my8xco57xaa" path="res://OST.wav" id="22_m22ed"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ki6vc"]
 texture = ExtResource("1_h1wwh")
@@ -505,3 +506,8 @@ position = Vector2(68, 124)
 
 [node name="Wheat" parent="." instance=ExtResource("21_6tbis")]
 position = Vector2(69, 98)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_m22ed")
+volume_db = 6.0
+autoplay = true
