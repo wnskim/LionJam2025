@@ -1,8 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://3r6lkvjfphv3"]
+[gd_scene load_steps=21 format=3 uid="uid://3r6lkvjfphv3"]
 
 [ext_resource type="Script" path="res://credits.gd" id="1_s10oi"]
 [ext_resource type="Texture2D" uid="uid://u64l8mbkpk2j" path="res://Assets/farm-scene-with-windmill-and-barn-free-vector.jpg" id="2_aau73"]
 [ext_resource type="FontFile" uid="uid://bs8iulaol12q5" path="res://fonts/RebellionSquad-ZpprZ.ttf" id="3_war0p"]
+[ext_resource type="FontFile" uid="uid://kgax8ibdgd1j" path="res://fonts/MightySouly-lxggD.ttf" id="4_tf15u"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qcjni"]
 texture = ExtResource("2_aau73")
@@ -89,6 +90,7 @@ offset_top = 48.0
 offset_right = 118.0
 offset_bottom = 93.0
 focus_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_tf15u")
 theme_override_font_sizes/normal_font_size = 3
 theme_override_styles/fill = SubResource("StyleBoxEmpty_lwv0h")
 theme_override_styles/background = SubResource("StyleBoxEmpty_qkrr1")
@@ -109,6 +111,7 @@ offset_top = 48.0
 offset_right = 174.0
 offset_bottom = 73.0
 focus_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_tf15u")
 theme_override_font_sizes/normal_font_size = 3
 theme_override_styles/fill = SubResource("StyleBoxEmpty_lwv0h")
 theme_override_styles/background = SubResource("StyleBoxEmpty_qkrr1")
