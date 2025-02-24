@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://3r6lkvjfphv3"]
+[gd_scene load_steps=20 format=3 uid="uid://3r6lkvjfphv3"]
 
 [ext_resource type="Script" path="res://credits.gd" id="1_s10oi"]
 [ext_resource type="Texture2D" uid="uid://u64l8mbkpk2j" path="res://Assets/farm-scene-with-windmill-and-barn-free-vector.jpg" id="2_aau73"]
+[ext_resource type="FontFile" uid="uid://bs8iulaol12q5" path="res://fonts/RebellionSquad-ZpprZ.ttf" id="3_war0p"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qcjni"]
 texture = ExtResource("2_aau73")
@@ -52,6 +53,7 @@ theme_override_colors/font_disabled_color = Color(0.860369, 0.860369, 0.860369, 
 theme_override_colors/font_hover_pressed_color = Color(0.646029, 0.646029, 0.646029, 1)
 theme_override_colors/font_hover_color = Color(0.647059, 0.647059, 0.647059, 1)
 theme_override_colors/font_pressed_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_fonts/font = ExtResource("3_war0p")
 theme_override_font_sizes/font_size = 7
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gep6i")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_eeb62")
@@ -75,6 +77,7 @@ offset_top = 16.0
 offset_right = 104.0
 offset_bottom = 35.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_war0p")
 theme_override_font_sizes/font_size = 11
 text = "Credits"
 horizontal_alignment = 1

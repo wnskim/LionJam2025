@@ -1,7 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://x58awmgbpye8"]
+[gd_scene load_steps=21 format=3 uid="uid://x58awmgbpye8"]
 
 [ext_resource type="Texture2D" uid="uid://u64l8mbkpk2j" path="res://Assets/farm-scene-with-windmill-and-barn-free-vector.jpg" id="1_0ch3s"]
 [ext_resource type="Script" path="res://options.gd" id="1_qvitt"]
+[ext_resource type="FontFile" uid="uid://bs8iulaol12q5" path="res://fonts/RebellionSquad-ZpprZ.ttf" id="3_pp4ub"]
+[ext_resource type="FontFile" uid="uid://kgax8ibdgd1j" path="res://fonts/MightySouly-lxggD.ttf" id="4_2hlu6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jhfhd"]
 texture = ExtResource("1_0ch3s")
@@ -61,6 +63,7 @@ theme_override_colors/font_disabled_color = Color(0.860369, 0.860369, 0.860369, 
 theme_override_colors/font_hover_pressed_color = Color(0.646029, 0.646029, 0.646029, 1)
 theme_override_colors/font_hover_color = Color(0.647059, 0.647059, 0.647059, 1)
 theme_override_colors/font_pressed_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_fonts/font = ExtResource("3_pp4ub")
 theme_override_font_sizes/font_size = 7
 theme_override_styles/focus = SubResource("StyleBoxEmpty_dl7s3")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_p3xgq")
@@ -85,6 +88,7 @@ offset_top = 12.0
 offset_right = 32.0
 offset_bottom = 31.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_pp4ub")
 theme_override_font_sizes/font_size = 11
 text = "How to Play"
 horizontal_alignment = 1
@@ -94,10 +98,11 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = 10.0
 offset_top = 31.0
-offset_right = 82.0
+offset_right = 100.0
 offset_bottom = 103.0
 focus_mode = 2
-theme_override_font_sizes/normal_font_size = 3
+theme_override_fonts/normal_font = ExtResource("4_2hlu6")
+theme_override_font_sizes/normal_font_size = 4
 theme_override_styles/fill = SubResource("StyleBoxEmpty_4l8h2")
 theme_override_styles/background = SubResource("StyleBoxEmpty_0nebg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2i653")
