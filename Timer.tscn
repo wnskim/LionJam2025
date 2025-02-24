@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cs3sbj55tnpqk"]
+[gd_scene load_steps=4 format=3 uid="uid://cs3sbj55tnpqk"]
 
 [ext_resource type="Script" path="res://timer.gd" id="1_dn1vx"]
+[ext_resource type="FontFile" uid="uid://kgax8ibdgd1j" path="res://fonts/MightySouly-lxggD.ttf" id="1_k58nj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iuc1d"]
 bg_color = Color(0.6, 0.647059, 0.6, 1)
@@ -28,9 +29,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_k58nj")
 bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
 script = ExtResource("1_dn1vx")
-metadata/_edit_use_anchors_ = true
 
 [node name="s" type="Timer" parent="RichTextLabel"]
 wait_time = 2.0

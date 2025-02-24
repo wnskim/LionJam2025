@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bp877spahoych"]
+[gd_scene load_steps=11 format=3 uid="uid://bp877spahoych"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_0xs4u"]
 [ext_resource type="Texture2D" uid="uid://u64l8mbkpk2j" path="res://Assets/farm-scene-with-windmill-and-barn-free-vector.jpg" id="1_ppe35"]
+[ext_resource type="FontFile" uid="uid://kgax8ibdgd1j" path="res://fonts/MightySouly-lxggD.ttf" id="3_nh0b4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1m3bq"]
 texture = ExtResource("1_ppe35")
@@ -69,6 +70,8 @@ theme_override_colors/font_hover_pressed_color = Color(0.109804, 0.109804, 0.109
 theme_override_colors/font_hover_color = Color(0.109804, 0.109804, 0.109804, 1)
 theme_override_colors/font_pressed_color = Color(0.109804, 0.109804, 0.109804, 1)
 theme_override_colors/font_color = Color(0.109341, 0.109341, 0.109341, 1)
+theme_override_fonts/font = ExtResource("3_nh0b4")
+theme_override_font_sizes/font_size = 16
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4ypl4")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_p8q5m")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6rbk1")
@@ -84,6 +87,7 @@ theme_override_colors/font_hover_pressed_color = Color(0.109804, 0.109804, 0.109
 theme_override_colors/font_hover_color = Color(0.109804, 0.109804, 0.109804, 1)
 theme_override_colors/font_pressed_color = Color(0.109804, 0.109804, 0.109804, 1)
 theme_override_colors/font_color = Color(0.109341, 0.109341, 0.109341, 1)
+theme_override_fonts/font = ExtResource("3_nh0b4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4ypl4")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_p8q5m")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6rbk1")
@@ -99,6 +103,7 @@ theme_override_colors/font_hover_pressed_color = Color(0.109804, 0.109804, 0.109
 theme_override_colors/font_hover_color = Color(0.109804, 0.109804, 0.109804, 1)
 theme_override_colors/font_pressed_color = Color(0.109804, 0.109804, 0.109804, 1)
 theme_override_colors/font_color = Color(0.109341, 0.109341, 0.109341, 1)
+theme_override_fonts/font = ExtResource("3_nh0b4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4ypl4")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_p8q5m")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6rbk1")
@@ -114,6 +119,7 @@ theme_override_colors/font_hover_pressed_color = Color(0.109804, 0.109804, 0.109
 theme_override_colors/font_hover_color = Color(0.109804, 0.109804, 0.109804, 1)
 theme_override_colors/font_pressed_color = Color(0.109804, 0.109804, 0.109804, 1)
 theme_override_colors/font_color = Color(0.109341, 0.109341, 0.109341, 1)
+theme_override_fonts/font = ExtResource("3_nh0b4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4ypl4")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_p8q5m")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6rbk1")
@@ -132,8 +138,9 @@ offset_top = 36.0
 offset_right = 70.5
 offset_bottom = 79.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 24
-text = "[name here]"
+theme_override_fonts/font = ExtResource("3_nh0b4")
+theme_override_font_sizes/font_size = 35
+text = "Harvest Hustle !"
 horizontal_alignment = 1
 vertical_alignment = 1
 
